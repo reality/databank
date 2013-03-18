@@ -21,7 +21,7 @@ mostly it just works.
 
 # License
 
-Copyright 2011, 2012, E14N https://e14n.com/
+Copyright 2011-2013 E14N https://e14n.com/
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -433,6 +433,11 @@ Get the object with primary key `id` and returns it to the `callback`.
 
 Does a search for objects matching the criteria, collects them, and
 returns an array to `callback`.
+
+* `scan(handler, callback)`
+
+Finds all objects of this type and calls `handler` on each one. At the
+end, fires `callback` with a single `err` parameter.
 
 * `create(properties, callback)`
 
