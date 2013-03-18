@@ -41,9 +41,9 @@ The point of the Databank interface is so applications can use one
 interface for developing persistence code, and then at deployment time
 you can decide what driver to use.
 
-There are three drivers included in this package: 'memory', 'disk',
-and 'caching'. You should be able to develop code using one or both of
-the first two.
+There are two drivers included in this package: 'memory' and
+'caching'. The first is great for development but pretty bad for
+production.
 
 There are a few drivers not in this package. You can search for them
 on npm; they all start with 'databank-'. So, 'databank-leveldb',
