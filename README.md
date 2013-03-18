@@ -102,7 +102,7 @@ In schemata you can use dotted-notation, a la MongoDB, to define
 fields that are part of parts of the object. For example, for an
 object like this:
 
-    { email: "evan@status.net", name: { last: "Prodromou", first: "Evan" } }
+    { email: "evan@e14n.com", name: { last: "Prodromou", first: "Evan" } }
 
 ...you may have a schema like this:
 
