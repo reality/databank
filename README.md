@@ -253,6 +253,23 @@ The databank interface has these methods:
                     });
     }
 
+* `scan(type, onResult, onCompletion)`
+
+  Finds all objects of type `type`. `onResult` is called one time
+  for each result, with a single argument, the object that matches the
+  criteria. Use a collector array if you want all the results in an array.
+  
+  `onCompletion` takes one argument, a `DatabankError`. A search with
+  no results will get a `NoSuchThingError`. I think this is the method
+  most likely to elicit a `NotImplementedError`, since most key-value
+  stores don't handle this kind of thing.
+
+  This is probably most useful for off-line processing, like doing a
+  backup or for initializing roll-up data. At scale, this may take
+  days to complete. If you want to do something like searching a
+  range, figure out a better way, like storing an array of matches at
+  write time.
+
 * `readAll(type, ids, onCompletion)`
 
   Gets all the objects of type `type` with ids in the array
