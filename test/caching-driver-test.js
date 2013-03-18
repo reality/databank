@@ -22,7 +22,7 @@ var assert = require('assert'),
 
 var params = {
 	'cache': {driver: 'memory', params: {}},
-	'source': {driver: 'disk', params: {mktmp: true}}
+	'source': {driver: 'memory', params: {}}
     };
 
 var suite = databank.DriverTest('caching', params);
