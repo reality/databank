@@ -310,8 +310,9 @@ These are special shims for array values.
 * `append(type, id, toAppend, onCompletion)`
 
   Appends the value `toAppend` to the array at `type` and `id`.
-  `onCompletion` takes one param: an error. If array doesn't yet
-  exists, it becomes a single-element array.
+  `onCompletion` takes two params: an error, and the new length of
+  the array. If array doesn't yet exist, it becomes a single-element 
+  array.
   
   Defaults to a `read` and an `update` or `create`, but drivers can
   override to do an atomic append.
@@ -319,8 +320,9 @@ These are special shims for array values.
 * `prepend(type, id, toPrepend, onCompletion)`
 
   Prepends the value `toPrepend` to the array at `type` and `id`.
-  `onCompletion` takes one param: an error. If array doesn't yet
-  exists, it becomes a single-element array.
+  `onCompletion` takes two params: an error, and the new length of
+  the array. If array doesn't yet exist, it becomes a single-element 
+  array.
 
   Defaults to a `read` and an `update` or `create`, but drivers can
   override to do an atomic prepend.
